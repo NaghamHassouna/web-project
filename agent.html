@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="images/logo-removebg-preview.png" alt="logo " id="aboveimg">
+
+            <a href="home.html">Home </a>
+            <a href="sales.html">Sales </a>
+            <a href="offer.html">Offers</a>
+            
+            <a href="agent.html">Agent</a>
+            <a href="aboutus.html">About Us </a>
+            <a href="signin.html" class="sign">Log in </a>
+            <a href="signup.html" class="sign">Sign up </a>
+        </nav>
+    </header>
+    <div id="contenttable">
+        
+        <div id="agent conter">
+            <h3 id="cust">Customer Reviews</h3>
+            <div class="agent">
+                <img src="images/people1.jpg" alt="pepole" class="people">
+                <p class="p"><strong>Robert John</strong> <br>A great website that provides all real estate services and helps you very much in choosing
+                    your home.</p>
+
+            </div>
+
+            <div class="agent">
+                <img src="images/people3.jpg" alt="pepole" class="people">
+                <p class="p"><strong>Mary Patricia</strong> <br>A seamless and easy-to-use site that will inform you of all modern homes and help me choose
+                    my home.</p>
+
+            </div>
+
+            <div class="agent">
+                <img src="images/people2.jpg" alt="pepole" class="people">
+                <p class="p"><strong>William Joseph</strong> <br>A great site that I highly recommend is easy to use and informs you of all the modern homes
+                    and the right rentals and the place you want.</p>
+
+            </div>
+            <div class="agent">
+                <img src="images/people6.jpg" alt="pepole" class="people">
+                <p class="p"><strong>Susan Karen</strong> <br>A great site that I highly recommend is easy to use and informs you of all the modern homes
+                    and the right rentals and the place you want.</p>
+
+            </div>
+           
+
+
+            <form id="opinionForm">
+                <div id="op" >
+                 
+                    <img src="images/people5.jpg" alt="pepole" id="ii">
+                    <div id="opp">
+                    <label for="name" id="ll">Name:</label>
+                
+                     <input type="text" id="name" required><br>
+
+                     <textarea name="textarea" id="opinion" cols="60" rows="5"
+                     placeholder="Enter your opinion on our website"></textarea><br>
+                    <input type="submit" value="Sent" id="bttt">
+                    <ul id="opinionList"></ul>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+        <img src="images/undraw_Hacker_mindset_re_8a33.png"" alt="agent" id="agentph">
+    </div>
+
+
+    <footer class="hhome">
+        <div class="divfooter">
+            <div class="div1">
+                <img src="images/logofooter-removebg-preview.png" alt="" id="logofooter">
+                <p id="footerpa">Ready to get started?</p>
+                <button id="btn2">Contact Us</button>
+
+            </div>
+            <hr class="hrr">
+            <div id="footercenter">
+                <div>
+                    <h4 id="h4foot">Subscribe To Our Newsletter</h4>
+                    <p id="pp">Email Address</p>
+
+                    <hr id="hh">
+                    <!-- <img src="images/imgfooter.png" alt="" id="iconfooter"> -->
+
+                </div>
+                <div class="cont">
+                    <div class="divcont">
+                        <h5>Company</h5>
+                        <a href="home.html" class="ahh">Home </a>
+                        <a href="">Rental</a>
+                        <a href="">sales </a>
+                        <a href="">Agent</a>
+                    </div>
+                    <div class="divcont">
+                        <h5>About</h5>
+                        <a href="">Our Story </a>
+                        <a href="">Board of Directors</a>
+                        <a href="">Team Members </a>
+                        <a href="">Our Foundation</a>
+                    </div>
+                    <div class="divcont">
+                        <h5>Contact Info</h5>
+                        <a href="">Spain Pro Real Estate Group. </a>
+                        <a href="">Viaje Solo,Park Center Office</a>
+                        <a href="mailto:Hoomie.io">Email: Hoomie.io </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="finaldiv">
+                <p id="ter">
+                    Terms&Conditions
+                </p>
+                <p id="pri">
+                    Privacy Policy
+                </p>
+                <div class="small">
+                    <small>Copyright </small>&copy;
+                    <small>2023 Homie</small>
+                </div>
+                <div id="iconfooter">
+                    <img src="images/email.png" alt="email" class="imgicfot">
+                    <img src="images/Facebook.png" alt="faceboock" class="imgicfot">
+                    <img src="images/whatsapp.png" alt="whatsapp" class="imgicfot">
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script>
+    document.getElementById('opinionForm').addEventListener('submit', function (event) {
+        event.preventDefault(); 
+
+        
+        var nameInput = document.getElementById('name');
+        var opinionInput = document.getElementById('opinion');
+
+        
+        var opinion = {
+            name: nameInput.value,
+            opinion: opinionInput.value
+        };
+
+        var opinionList = document.getElementById('opinionList');
+        var listItem = document.createElement('li');
+        listItem.innerHTML =  '<img src="images/user.png" alt="Your Photo" width="30" >'+" "+
+        '<strong>' + opinion.name + ':</strong> ' + opinion.opinion;
+        opinionList.appendChild(listItem);
+
+        nameInput.value = '';
+        opinionInput.value = '';
+    });
+</script>
+
+</html>
